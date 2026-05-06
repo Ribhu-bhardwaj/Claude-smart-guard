@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Claude Smart-Guard</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main class="popup">
+      <section class="hero">
+        <p class="eyebrow">Claude Smart-Guard</p>
+        <h1>Weekly Context Tax</h1>
+        <p class="subhead">Local analytics only. No external calls.</p>
+      </section>
+      <section class="summary">
+        <div>
+          <span class="label">Wasted</span>
+          <strong id="wasted-total">0</strong>
+        </div>
+        <div>
+          <span class="label">Productive</span>
+          <strong id="productive-total">0</strong>
+        </div>
+        <div>
+          <span class="label">Turns</span>
+          <strong id="turn-total">0</strong>
+        </div>
+      </section>
+      <section>
+        <div class="heatmap-head">
+          <span>Weekly heatmap</span>
+          <span class="legend">dark = heavier token load</span>
+        </div>
+        <div id="heatmap" class="heatmap"></div>
+      </section>
+      <section id="empty-state" class="empty" hidden>
+        Send a few Claude turns to start building your local quota profile.
+      </section>
+    </main>
+    <script src="db.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>
